@@ -15,23 +15,31 @@
     </div>
   </div>
   <div class="card table-api" *ngIf="neowsApi | async as neowss" >
-    <p-table [value]="neowss" [scrollable]="true" scrollHeight="400px">
-        <ng-template pTemplate="header">
-          <th style="min-width:200px; padding: 1rem;">Id</th>
-          <th style="min-width:200px; padding: 1rem;">Name</th>
-          <th style="min-width:200px; padding: 1rem;">Estimated Diameter Max</th>
-          <th style="min-width:200px; padding: 1rem;">Estimated Diameter Min</th>
-          <th style="min-width:100px; padding: 1rem;">Close Approach Date</th>
-        </ng-template>
-        <ng-template pTemplate="body" let-neows>
-          <tr *ngFor="let dates of neowss">
-            <td style="min-width:200px">{{dates.id}}</td>
-            <td style="min-width:200px">{{dates.name}}</td>
-            <td style="min-width:200px">{{dates.estimated_diameter.kilometers.estimated_diameter_max}} KM</td>
-            <td style="min-width:200px">{{dates.estimated_diameter.kilometers.estimated_diameter_min}} KM</td>
-            <td style="min-width:200px">{{dates.close_approach_data[0].close_approach_date_full}}</td>
-          </tr>
-        </ng-template>
+    <p-table #dt1 [value]="neowss" dataKey="id" [scrollable]="true" scrollHeight="400px" [globalFilterFields]="['name']">
+      <ng-template pTemplate="caption">
+        <div class="flex">
+            <span class="p-input-icon-left ml-auto">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')" placeholder="Search keyword in name" />
+            </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <th style="min-width:200px; padding: 1rem;">Id</th>
+        <th field="Name" style="min-width:200px; padding: 1rem;">Name</th>
+        <th style="min-width:200px; padding: 1rem;">Estimated Diameter Max</th>
+        <th style="min-width:200px; padding: 1rem;">Estimated Diameter Min</th>
+        <th style="min-width:100px; padding: 1rem;">Close Approach Date</th>
+      </ng-template>
+      <ng-template pTemplate="body" let-neowss>
+        <tr>
+          <td style="min-width:200px">{{neowss.id}}</td>
+          <td style="min-width:200px">{{neowss.name}}</td>
+          <td style="min-width:200px">{{neowss.estimated_diameter.kilometers.estimated_diameter_max}} KM</td>
+          <td style="min-width:200px">{{neowss.estimated_diameter.kilometers.estimated_diameter_min}} KM</td>
+          <td style="min-width:200px">{{neowss.close_approach_data[0].close_approach_date_full}}</td>
+        </tr>
+      </ng-template>
     </p-table>
   </div>
 </div>

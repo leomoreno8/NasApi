@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import {DatePipe} from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 import { SidebarModule } from 'primeng/sidebar';
 import { SlideMenuModule } from 'primeng/slidemenu';
@@ -17,6 +17,7 @@ import { RippleModule } from 'primeng/ripple';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'primeng/calendar';
 import { TableModule } from 'primeng/table';
+import { InputTextModule } from 'primeng/inputtext';
 
 import { SlideMenuComponent } from './components/slide-menu/slide-menu.component';
 import { ApodApiComponent } from './components/apod-api/apod-api.component';
@@ -67,6 +68,7 @@ const routes: Routes = [
     CalendarModule,
     FormsModule,
     TableModule,
+    InputTextModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
