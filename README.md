@@ -16,8 +16,8 @@ Any questions or suggestions, let me know
 ## Run project
 
 in the project root:
-`npm install` to install all packages
-`ng serve` to run
+- `npm install` to install all packages
+- `ng serve` to run
 Enjoy 🥳
 
 
