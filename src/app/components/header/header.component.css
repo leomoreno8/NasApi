@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: top;
+  text-align: top;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+  width: 100%;
+  
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.img-logo {
+  width: 100px;
+}
+
+.header-title {
+  font-weight: 200;
+  font-size: 2rem;
+}

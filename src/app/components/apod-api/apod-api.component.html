@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="header">
+    <h2>APOD API</h2>
+    <h3>Astronomy Picture of the Day</h3>
+    <div class="input-box">
+      <div class="input-date">
+        <label for="template">Enter a date:</label>
+        <p-calendar [(ngModel)]="date" inputId="template">
+            <ng-template pTemplate="date" let-date>
+                <span style="border-radius:50%; padding: .25em; width: 5em; height: 2em; display:block">{{date.day}}</span>
+            </ng-template>
+        </p-calendar>
+      </div>
+      <p-button label="" icon="pi pi-search" [loading]="isLoading" (onClick)="getData(date)"></p-button>
+    </div>
+    <a class="random-date" (click)="getRandomData()">CREATE A RANDOM DATE</a>
+  </div>
+  <div class="api-box" *ngIf="apodApi | async as apod">
+    <h1 class="title-api">{{apod.title}}</h1>
+    <h2 class="date-api">{{apod.date}}</h2>
+    <h2 class="explanation-api">{{apod.explanation}}</h2>
+    <img class="img-api" src="{{apod.url}}" alt="Astronomy Picture of the Day"/>
+  </div>
+  <div class="api-box" *ngIf="randomApodApi | async as apod">
+    <div *ngFor="let item of apod">
+      <h1 class="title-api">{{item.title}}</h1>
+      <h2 class="date-api">{{item.date}}</h2>
+      <h2 class="explanation-api">{{item.explanation}}</h2>
+      <img class="img-api" src="{{item.url}}" alt="Astronomy Picture of the Day"/>
+
+    </div>
+  </div>
+</div>
