@@ -2,7 +2,7 @@
 
 This is an Angular 14 application.
 
-- [![Figma](prototyping in figma)](https://www.figma.com/file/SrBWZ7iQ27EnWTzlzdRzWT/Untitled?node-id=0%3A1&t=GNsi2kC6wWofP8E3-1)
+- [prototyping in figma](https://www.figma.com/file/SrBWZ7iQ27EnWTzlzdRzWT/Untitled?node-id=0%3A1&t=GNsi2kC6wWofP8E3-1)
 - Used some NASA APIs
 - PrimeNg, RxJS Libraries
 
