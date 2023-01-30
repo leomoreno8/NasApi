@@ -6,12 +6,12 @@ body {
   background: #e0e0e0;
   height: 100vh;
   max-height: 100vh;
-
 }
 
 body app-root {
   display: flex;
   height: 100vh;
+  background: #ffffff;
 }
 
 body app-root app-home {
@@ -19,6 +19,7 @@ body app-root app-home {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: #ffffff;
 }
 
 body app-root app-contact {
@@ -26,6 +27,7 @@ body app-root app-contact {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: #ffffff;
 }
 
 body app-root app-about-us {
@@ -33,6 +35,7 @@ body app-root app-about-us {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: #ffffff;
 }
 
 body app-root app-apod {
@@ -40,6 +43,7 @@ body app-root app-apod {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: #ffffff;
 }
 
 body app-root app-neows {
@@ -47,6 +51,7 @@ body app-root app-neows {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: #ffffff;
 }
 
 a {
